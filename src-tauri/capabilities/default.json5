@@ -1,0 +1,26 @@
+{
+  "$schema": "../gen/schemas/desktop-schema.json",
+  "identifier": "default",
+  "description": "Capability for the main window",
+  "windows": ["main"],
+  "permissions": [
+    "core:default",
+    "shell:allow-open",
+    // ウィンドウクローズを許可
+    "core:window:allow-close",
+    // ウィンドウ最小化を許可
+    "core:window:allow-minimize",
+    // ウィンドウの最大化状態取得を許可
+    "core:window:allow-is-maximized",
+    // ウィンドウの最大化解除を許可
+    "core:window:allow-unmaximize",
+    // ウィンドウの最大化を許可
+    "core:window:allow-maximize",
+    // 最大化・最大化解除のトグルの許可 - こちらは設定されてなくてもよさそう
+    // "core:window:allow-toggle-maximize",
+    // 最大化・最大化解除の内部によるトグルの許可
+    "core:window:allow-internal-toggle-maximize",
+    // ウィンドウドラッグの許可
+    "core:window:allow-start-dragging",
+  ]
+}
